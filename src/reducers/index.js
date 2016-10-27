@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
-import visibilityFilter from './visibilityFilter'
+import setUser from './setUser'
 import { reducer as reduxFormReducer } from 'redux-form'
 
 const todoApp = combineReducers({
-  todos,
-  visibilityFilter,
+  setUser,
   form : reduxFormReducer
 })
 

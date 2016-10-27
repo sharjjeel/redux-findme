@@ -3,28 +3,22 @@
  */
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { addTodo } from '../actions'
-
 class UserForm extends Component {
     render() {
-        const {dispatch} = this.props;
-        const showResults = values => {
-            window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
-            console.log("asdjnkas");
-        }
+        const {onSubmit} = this.props;
         return (
-            <form onSubmit={showResults}>
+            <form onSubmit={onSubmit}>
                 <div>
-                    <label htmlFor="userName">User Name </label>
+                    <label htmlFor="username">User Name</label>
                     <div>
-                        <Field name="userName" component="input" type="text"/>
+                        <Field name="username" component="input" type="text"/>
                     </div>
-                    <label htmlFor="description">Contact Info </label>
+                    <label htmlFor="description">Contact Info</label>
                     <div>
                         <Field name="description" component="input" type="text"/>
                     </div>
                 </div>
-                <button type="submit">Submit</button>
+                <button onClick={data => {console.log(data);}} type="submit">Submit</button>
             </form>
         );
     }

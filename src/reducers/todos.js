@@ -31,6 +31,12 @@ const todos = (state = [], action) => {
       return state.map(t =>
         todo(t, action)
       )
+    case 'POP_UP':
+      window.alert("jnasdsa");
+      return [
+          ...state,
+          action.form
+      ]
     default:
       return state
   }

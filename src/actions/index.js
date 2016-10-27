@@ -5,6 +5,17 @@ export const addTodo = (text) => ({
   text
 })
 
+export const popUp = (form) => ({
+  type: 'POP_UP',
+  form
+})
+
+export const setUser = (form) => ({
+    type: 'SET_USER',
+    username: form.username,
+    description: form.description
+})
+
 export const setVisibilityFilter = (filter) => ({
   type: 'SET_VISIBILITY_FILTER',
   filter
